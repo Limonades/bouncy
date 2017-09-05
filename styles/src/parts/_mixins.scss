@@ -1,0 +1,31 @@
+@mixin background($url) {
+	background: {
+		image: $url;
+		repeat: no-repeat;
+		size: cover;
+		attachment: fixed;
+	}
+}
+
+@mixin title {
+	margin-bottom: 40px;	
+	text-align: center;
+	color: #333b46;
+	font-family: $source-sans-font-family;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+@mixin subtitle {
+	margin: 0 auto;
+	padding-bottom: 90px;
+	text-align: center;
+	width: 400px;
+	color: #81868e;
+	font-family: $open-sans-font-family;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 25px;	
+}

@@ -1,0 +1,50 @@
+.header__nav {
+	display: -ms-flexbox;
+	-ms-flex-pack: end;
+}
+
+.header__info {
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	-ms-flex-align: center;
+}
+
+.main__services {
+	display: -ms-flexbox;
+	-ms-flex-pack: justify;
+}
+
+.main__services__article {
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	-ms-flex-align: center;
+}
+
+.main__content {
+	display: -ms-flexbox;
+	-ms-flex-pack: justify;
+}
+
+.main__content__article {
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	-ms-flex-pack: center;
+}
+
+.main__content__photo-link {
+	display: -ms-flexbox;
+}
+
+.main__work__flex-items {
+	display: -ms-flexbox;
+}
+
+.main__work__form {
+	display: -ms-flexbox;
+	-ms-flex-pack: center;
+}
+
+.footer__social {
+	display: -ms-flexbox;
+	-ms-flex-pack: center;
+}

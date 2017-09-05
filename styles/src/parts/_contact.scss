@@ -1,0 +1,14 @@
+.contact {
+	&__title {
+		@include title;
+		padding-top: 80px;
+	}
+	&__subtitle {
+		@include subtitle;
+		padding-bottom: 70px;
+	}
+}
+
+#map {
+	height: 450px;
+}

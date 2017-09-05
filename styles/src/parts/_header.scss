@@ -1,0 +1,94 @@
+.header {
+	@include background( url('../../img/2-layers.png') );
+	&__container {
+		padding-top: 50px;
+	}
+	&__flex-container {
+		display: flex;
+		margin-bottom: 200px;
+		position: relative;
+	}
+	&__logo-link {
+		width: 30%;
+	}
+	&__nav {
+		display: flex;
+		justify-content: flex-end;
+		width: 70%;
+		padding-right: 15px;
+		&__item {
+			font-family: $open-sans-font-family;
+			list-style: none;
+			margin-left: 5px;
+			&-link {
+				color: white;
+				text-decoration: none;
+				padding: 5px 20px;
+				border: 1px solid transparent;
+				transition: all .3s ease;
+				border-radius: 16px;
+				&:hover {
+					border: 1px solid white;
+				}
+				&--active {
+					border: 1px solid white;
+				}
+			}
+		}
+		&--fixed {
+		    display: flex;
+		    padding: 15px;
+		    justify-content: flex-end;
+		    position: fixed;
+		    top: 0px;
+		    right: 75px;
+		    width: 30%;
+		    background-color: rgba(0, 0, 0, 0.5);
+		    border: none;
+		    z-index: 100;
+		    border-radius: 0px 0px 5px 5px;
+			-moz-border-radius: 0px 0px 5px 5px;
+			-webkit-border-radius: 0px 0px 5px 5px;
+			border: 0px solid #000000;
+		}
+	}
+	&__info {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+		&__title {
+			padding-bottom: 12px;
+			color: #ffffff;
+			font-family: $source-sans-font-family;
+			font-size: 35px;
+			line-height: 70px;
+			text-transform: uppercase;
+			letter-spacing: 8px;
+			font-weight: 100;
+		}
+		&__subtitle {
+			text-align: center;
+			width: 604px;
+			color: #ffffff;
+			font-family: $open-sans-font-family;
+			font-size: 16px;
+			line-height: 28px;
+			font-weight: 100;
+			margin-bottom: 220px;
+		}
+	}
+	&__scroll-button {
+		display: block;
+		background: url('../../img/spritee.png') no-repeat;
+		margin: auto;
+		background-position: 0 0;
+		height: 37px;
+		width: 37px;
+		margin-bottom: 80px;
+		&:hover {
+			background-position: 0 -37px;
+			cursor: pointer;
+		}		
+	}
+}
+
