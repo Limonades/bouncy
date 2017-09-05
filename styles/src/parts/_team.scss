@@ -16,6 +16,7 @@
 		margin-bottom: 120px;
 		&__slide {
 			display: flex;
+			display: -ms-flexbox;
 		}
 		&__photo {
 			width: 30%;

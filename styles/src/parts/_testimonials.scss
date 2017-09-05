@@ -14,6 +14,7 @@
 		background-color: white;
 		&__slide {
 			display: flex;
+			display: -ms-flexbox;
 			padding: 45px 100px;
 		}
 		&__photo {
@@ -21,7 +22,9 @@
 		}
 		&__info {
 			margin-bottom: 70px;
+			max-width: 800px; // for ie
 			&-about {
+				max-width: inherit;
 				color: #81868e;
 				font-family: $open-sans-font-family;
 				font-size: 16px;
@@ -38,7 +41,6 @@
 				text-transform: uppercase;
 			}
 			&-position {
-				color: #464646;
 				font-family: $open-sans-font-family;
 				font-size: 15px;
 				font-weight: 500;

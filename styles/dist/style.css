@@ -596,13 +596,17 @@ header
     padding-top: 50px; }
   .header__flex-container {
     display: flex;
+    display: -ms-flexbox;
     margin-bottom: 200px;
-    position: relative; }
+    width: 100%; }
   .header__logo-link {
+    display: block;
     width: 30%; }
   .header__nav {
     display: flex;
     justify-content: flex-end;
+    display: -ms-flexbox;
+    -ms-flex-pack: end;
     width: 70%;
     padding-right: 15px; }
     .header__nav__item {
@@ -622,8 +626,10 @@ header
           border: 1px solid white; }
     .header__nav--fixed {
       display: flex;
-      padding: 15px;
       justify-content: flex-end;
+      display: -ms-flexbox;
+      -ms-flex-pack: end;
+      padding: 15px;
       position: fixed;
       top: 0px;
       right: 75px;
@@ -638,7 +644,10 @@ header
   .header__info {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: center; }
     .header__info__title {
       padding-bottom: 12px;
       color: #ffffff;
@@ -697,7 +706,9 @@ main-portfolio
     line-height: 25px; }
   .main__works {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    display: -ms-flexbox;
+    -ms-flex-pack: center; }
     .main__works__buttons {
       list-style: none;
       padding: 10px; }
@@ -772,7 +783,8 @@ main-team
   max-width: 1000px;
   margin-bottom: 120px; }
   .team__slider__slide {
-    display: flex; }
+    display: flex;
+    display: -ms-flexbox; }
   .team__slider__photo {
     width: 30%;
     margin-bottom: 60px; }
@@ -822,7 +834,10 @@ _talk
   .talk__container {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-align: center; }
   .talk__title {
     color: #ffffff;
     font-family: "Open Sans", sans-serif;
@@ -831,6 +846,7 @@ _talk
     margin-top: 60px;
     margin-bottom: 30px; }
   .talk__button {
+    display: inline-block;
     text-decoration: none;
     color: #ffffff;
     font-family: "Open Sans", sans-serif;
@@ -878,12 +894,15 @@ testimonials
     background-color: white; }
     .testimonials__slider__slide {
       display: flex;
+      display: -ms-flexbox;
       padding: 45px 100px; }
     .testimonials__slider__photo {
       margin-right: 75px; }
     .testimonials__slider__info {
-      margin-bottom: 70px; }
+      margin-bottom: 70px;
+      max-width: 800px; }
       .testimonials__slider__info-about {
+        max-width: inherit;
         color: #81868e;
         font-family: "Open Sans", sans-serif;
         font-size: 16px;
@@ -898,7 +917,6 @@ testimonials
         line-height: 20px;
         text-transform: uppercase; }
       .testimonials__slider__info-position {
-        color: #464646;
         font-family: "Open Sans", sans-serif;
         font-size: 15px;
         font-weight: 500;
@@ -942,8 +960,12 @@ footer
 .footer {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-align: center; }
   .footer__title {
+    display: inline-block;
     margin-top: 70px;
     margin-bottom: 25px; }
   .footer__subtitle {
@@ -954,6 +976,7 @@ footer
     font-weight: 600; }
   .footer__icon {
     display: flex;
+    display: -ms-flexbox;
     margin-bottom: 70px; }
     .footer__icon__item {
       list-style: none;

@@ -12,6 +12,8 @@
 	&__works {
 		display: flex;
 		justify-content: center;
+  		display: -ms-flexbox;
+  		-ms-flex-pack: center;
 		&__buttons {
 			list-style: none;
 			padding: 10px;
