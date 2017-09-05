@@ -923,7 +923,10 @@ testimonials
         line-height: 20px;
         text-transform: uppercase; }
 
-.slick-dots {
+.team__slider .slick-dots {
+  bottom: 10px; }
+
+.testimonials__slider .slick-dots {
   bottom: 50px; }
 
 /*-------------------------------------------------
