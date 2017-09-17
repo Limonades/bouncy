@@ -8,6 +8,11 @@
 	}
 	&__subtitle {
 		@include subtitle;
+		@include breakpoint(xs) {
+			padding-bottom: 30px;
+			max-width: 250px;
+			font-size: 13px;
+		}
 	}
 	&__works {
 		display: flex;
@@ -17,6 +22,9 @@
 		&__buttons {
 			list-style: none;
 			padding: 10px;
+			@include breakpoint(xs) {
+				padding: 0;
+			}
 		}
 		&__link {
 			text-decoration: none;
@@ -47,22 +55,43 @@
 					background-color: #11be9b;
 				}
 			}
+			@include breakpoint(xs) {
+				font-size: 12px;
+			}
 		}
 		&__photos {
-			width: 1120px;
+			max-width: 1120px;
 			margin: 0 auto;
 			margin-top: 60px;
 			margin-bottom: 100px;
+			@include breakpoint(md) {
+				max-width: 840px;
+			}
+			@include breakpoint(tb) {
+				max-width: 560px;
+			}
+			@include breakpoint(xs) {
+				max-width: 280px;
+			}
+			// @include breakpoint(xs) {
+			// 	max-width: 60%;
+			// }
 			&-item {
 				display: block;
 				text-decoration: none;
 				margin-right: 5px;
 				margin-left: 5px;
 				margin-bottom: 5px;
+				width: 24%;
 				&:hover {
 					transition: all .3s ease;
-					opacity: .8;				}
+					opacity: .8;				
+				}
 			}
 		}
 	}
+}
+
+.test {
+	margin: 0 auto;
 }

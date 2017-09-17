@@ -9,7 +9,6 @@
 
             var $grid = $('.grid').isotope({
                 itemSelector: '.grid-item',
-                percentPosition: true,
                 masonry: {
                     columnWidth: '.grid-item'
                 }
@@ -32,6 +31,19 @@
               });
             });
 
+
+            var $container = $('.grid')
+            // initialize Isotope
+            $container.isotope({
+              // options...
+              resizable: false, // disable normal resizing
+              // set columnWidth to a percentage of container width
+              masonry: { columnWidth: $container.width() / 4 }
+            });
+
+            // update columnWidth on window resize
+   
+
             // .........................END ISOTOPE..........................
 
             // ............................SLICK.............................
@@ -49,7 +61,7 @@
                 speed: 1000,
                 fade: true,
                 cssEase: 'linear',
-                autoplay: true,
+                // autoplay: true,
                 autoplaySpeed: 4000,
                 adaptiveHeight: true
             });
@@ -99,7 +111,6 @@
             });
 
 
-
            // ...........................END SCROLL.............................
 
            // ...........................FIXED NAV.............................
@@ -118,18 +129,39 @@
             $(window).scroll(function() {
               winPos = $(window).scrollTop();
 
-            if (winPos >= navPos) {
-              $('.header__nav').addClass('header__nav--fixed');
-              $('.header__nav__item-link').removeClass('header__nav__item-link--active');
-            } else {
-              $('.header__nav').removeClass('header__nav--fixed');
-            }
+              if (winPos >= navPos) {
+                $('.header__menu').addClass('header__menu--fixed');
+                $('.header__nav__item-link').removeClass('header__nav__item-link--active');
+              } else {
+                $('.header__menu').removeClass('header__menu--fixed');
+              }
+
+              var windowWidth = $(window).width();
+                if(windowWidth < 767) {
+                   $(".header__menu").removeClass("header__menu--fixed");
+                }
               
             });
 
-
+              
            // ...........................END FIXED NAV..........................
 
+
+           // ...........................HAMBURGER..............................
+
+
+             $('#header__menu-hamburger').click(function(){
+              $(this).toggleClass('open');
+
+                if ( $(this).hasClass('open') ) {
+                  $('.header__nav').addClass('header__nav--drop');
+                  } else {
+                $('.header__nav').removeClass('header__nav--drop');
+                  }
+            });
+
+             
+            // ...........................END HAMBURGER..........................
 
     }); 
 })(jQuery);
@@ -167,3 +199,5 @@ function initMap() {
 }
 
 // .................................END MAP...................................
+
+

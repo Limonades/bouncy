@@ -6,6 +6,10 @@
 	&__subtitle {
 		@include subtitle;
 		padding-bottom: 70px;
+		@include breakpoint(xs) {
+			max-width: 250px;
+			font-size: 13px;
+		}
 	}
 }
 

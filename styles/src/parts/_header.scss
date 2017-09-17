@@ -2,53 +2,25 @@
 	@include background( url('../../img/2-layers.png') );
 	&__container {
 		padding-top: 50px;
-	}
-	&__flex-container {
-		display: flex;
-		display: -ms-flexbox;
-		margin-bottom: 200px;
-		width: 100%;
-	}
-	&__logo-link {
-		display: block;
-		width: 30%;
-	}
-	&__nav {
-		display: flex;
-		justify-content: flex-end;
-		display: -ms-flexbox;
-		-ms-flex-pack: end;
-		width: 70%;
-		padding-right: 15px;
-		&__item {
-			font-family: $open-sans-font-family;
-			list-style: none;
-			margin-left: 5px;
-			&-link {
-				color: white;
-				text-decoration: none;
-				padding: 5px 20px;
-				border: 1px solid transparent;
-				transition: all .3s ease;
-				border-radius: 16px;
-				&:hover {
-					border: 1px solid white;
-				}
-				&--active {
-					border: 1px solid white;
-				}
-			}
+		@include breakpoint(md) {
+			padding: 50px 50px;
 		}
+	}
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		display: -ms-flexbox;
+		-ms-flex-pack: justify;
+		width: 100%;
+		position: relative;
 		&--fixed {
 		    display: flex;
-		    justify-content: flex-end;
-		    display: -ms-flexbox;
-		    -ms-flex-pack: end;
+		    justify-content: space-around;
 		    padding: 15px;
 		    position: fixed;
 		    top: 0px;
-		    right: 75px;
-		    width: 30%;
+		    right: 0px;
+		    width: 100%;
 		    background-color: rgba(0, 0, 0, 0.5);
 		    border: none;
 		    z-index: 100;
@@ -56,9 +28,71 @@
 			-moz-border-radius: 0px 0px 5px 5px;
 			-webkit-border-radius: 0px 0px 5px 5px;
 			border: 0px solid #000000;
+			transition: all 1s ease;
+		}
+	}
+	&__logo-link {
+		display: block;
+	}
+	&__nav {
+		display: flex;
+		justify-content: flex-end;
+		display: -ms-flexbox;
+		-ms-flex-pack: end;
+		padding-right: 15px;
+		@include breakpoint(sm) {
+			display: none;
+		}
+		&--drop {
+			display: flex;
+			display: -ms-flexbox;
+			flex-direction: column;
+			-ms-flex-direction: column;
+			align-items: center;
+	        width: 100%;
+			position: absolute;
+			top: 40px;
+			background-color: rgba(0, 0, 0, 0.5);
+			padding-right: 0;
+			border-radius: 3px;
+		}
+		&__item {
+			font-family: $open-sans-font-family;
+			list-style: none;
+			margin-left: 5px;
+			@include breakpoint(sm) {
+			    border: none;
+			    width: 70%;
+			    padding: 10px 20px;
+			    margin: 10px;
+			    text-align: center;
+			    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+			}
+			&-link {
+				color: white;
+				text-decoration: none;
+				padding: 5px 20px;
+				border: 1px solid transparent;
+				transition: all .3s ease;
+				border-radius: 16px;
+				@include breakpoint(sm) {				  			
+			  		opacity: 0.5;
+				}
+				&:hover {
+					border: 1px solid white;
+					@include breakpoint(sm) {				
+			  			border: 1px solid transparent;
+			  			opacity: 1;
+					}
+				}
+				&--active {
+					border: 1px solid white;
+				}
+			}
 		}
 	}
 	&__info {
+		margin-top: 200px;
 	    display: flex;
 	    flex-direction: column;
 	    align-items: center;
@@ -75,6 +109,15 @@
 			text-transform: uppercase;
 			letter-spacing: 8px;
 			font-weight: 100;
+			@include breakpoint(sm) {
+			    margin-top: 30px;
+			    line-height: 46px;
+			    text-align: center;
+			}
+			@include breakpoint(xs) {
+				line-height: 30px;
+				font-size: 20px;		
+			}
 		}
 		&__subtitle {
 			text-align: center;
@@ -85,6 +128,13 @@
 			line-height: 28px;
 			font-weight: 100;
 			margin-bottom: 220px;
+			@include breakpoint(sm) {
+			    width: 400px;
+			}
+			@include breakpoint(xs) {
+				width: 250px;
+				font-size: 13px;	
+			}
 		}
 	}
 	&__scroll-button {

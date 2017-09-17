@@ -17,20 +17,26 @@
 	<body>
 	<header class="header" id="hello">
 		<div class="header__container container">
-			<div class="header__flex-container">
-				<a class="header__logo-link" href="">
+			<div class="header__menu">
+				<a class="header__logo-link" href="#hello">
 					<img class="header__logo-pic" src="img/bouncy.png" alt="logo">
 				</a>
 				<!-- end.header__logo -->
 				<ul class="header__nav">
-					<li class="header__nav__item"><a href="#hello" class="header__nav__item-link header__nav__item-link--active">Hello</a></li>
+					<li class="header__nav__item"><a href="#hello" class="header__nav__item-link">Hello</a></li>
 					<li class="header__nav__item"><a href="#portfolio" class="header__nav__item-link">Portfolio</a></li>
 					<li class="header__nav__item"><a href="#team" class="header__nav__item-link">Team</a></li>
 					<li class="header__nav__item"><a href="#contact" class="header__nav__item-link">Contact</a></li>
 				</ul>
 				<!-- end.header__nav -->
+			<div id="header__menu-hamburger">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
 			</div>
-			<!-- end.header__flex-container -->
+			</div>
+			<!-- end.menu -->
 			<section class="header__info">
 				<h1 class="header__info__title">
 					We Are Code Cafe
@@ -123,9 +129,9 @@
 				At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 			</h3>
 			<div class="team__slider">
-				<div id="loh" class="team__slider__slide team__slider__slide--first">
+				<div class="team__slider__slide team__slider__slide--first">
 					<div class="team__slider__photo team__slider__photo--first">
-						<img src="img/layer-103.png" alt="photo">
+						<img class="team__slider__img" src="img/layer-103.png" alt="photo">
 					</div>
 					<div class="team__slider__info team__slider__info--first">
 						<section class="team__slider__info-title team__slider__info-title--first">
@@ -140,7 +146,7 @@
 
 				<div class="team__slider__slide team__slider__slide--second">
 					<div class="team__slider__photo team__slider__photo--second">
-						<img src="img/layer-103.png" alt="photo">
+						<img class="team__slider__img" src="img/layer-103.png" alt="photo">
 					</div>
 					<div class="team__slider__info team__slider__info--second">
 						<section class="team__slider__info-title team__slider__info-title--second">
@@ -155,7 +161,7 @@
 
 				<div class="team__slider__slide team__slider__slide--third">
 					<div class="team__slider__photo team__slider__photo--third">
-						<img src="img/layer-103.png" alt="photo">
+						<img class="team__slider__img" src="img/layer-103.png" alt="photo">
 					</div>
 					<div class="team__slider__info team__slider__info--third">
 						<section class="team__slider__info-title team__slider__info-title--third">

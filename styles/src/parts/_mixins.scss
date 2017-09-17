@@ -29,3 +29,37 @@
 	font-weight: 600;
 	line-height: 25px;	
 }
+
+// Breakpoints (Example: @include breakpoint(tablet) { YOUR CODE GOES HERE } )
+@mixin breakpoint($point) {
+    // Extra small devices (320px +)
+    @if $point == xs {
+         @media only screen and (min-width : 320px) and (max-width: 479px) {
+            @content;
+        }
+    }
+    // Small devices (480px +)
+    @else if $point == sm {
+         @media only screen and (max-width : 767px) {
+            @content;
+        }
+    }
+    // Tablets (768px +)
+    @else if $point == tb {
+         @media only screen and (max-width : 991px) {
+            @content;
+        }
+    }
+    // Medium Devices, Notebooks (992px +)
+    @else if $point == md {
+         @media only screen and (max-width : 1159px) {
+            @content;
+        }
+    }
+    // Large Devices, Wide Screens
+    @else if $point == desktop {
+         @media only screen and (min-width : 1160px){
+            @content;
+        }
+    }
+}

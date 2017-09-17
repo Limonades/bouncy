@@ -9,6 +9,10 @@
 	&__subtitle {
 		@include subtitle;
 		padding-bottom: 60px;
+		@include breakpoint(xs) {
+			max-width: 250px;
+			font-size: 13px;
+		}
 	}
 	&__slider {
 		background-color: white;
@@ -16,9 +20,22 @@
 			display: flex;
 			display: -ms-flexbox;
 			padding: 45px 100px;
+			@include breakpoint(tb) {
+				padding: 45px 15px;			
+			}
+			@include breakpoint(xs) {
+				flex-direction: column;
+				align-items: center;
+				-ms-flex-direction: column;
+				-ms-flex-align: center;
+			}
 		}
 		&__photo {
 			margin-right: 75px;
+			@include breakpoint(xs) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
 		}
 		&__info {
 			margin-bottom: 70px;
@@ -30,6 +47,14 @@
 				font-size: 16px;
 				font-weight: 600;
 				line-height: 28px;
+				@include breakpoint(tb) {
+					font-size: 12px;
+					max-height: 400px;
+					overflow-y: scroll;	
+				}
+				@include breakpoint(xs) {
+					padding-right: 5px;
+				}
 			}
 			&-name {
 				margin-top: 35px;
